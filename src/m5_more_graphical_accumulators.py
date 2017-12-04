@@ -132,31 +132,34 @@ def run_test_draw_circles_from_rectangle():
 
     title = 'Tests 1 and 2 of DRAW_SQUARES_FROM_CIRCLE: '
     title = title + ' 7 little squares from green circle, 4 big squares'
-    window1 = rg.RoseWindow(650, 350, title)
+    window1 = rg.RoseWindow(720, 500, title)
 
     # Test 1:
-    rectangle = rg.Rectangle(rg.Point(100,100),rg.Point(120,150))
+    rectangle = rg.Rectangle(rg.Point(400,250),rg.Point(440,325))
     rectangle.fill_color = 'green'
-    rectangle.outline_color = 'red'
-    draw_circles_from_rectangle(8, 2, rectangle, window1)
+    rectangle.outline_color = 'black'
+    rectangle.outline_thickness = 5
+    draw_circles_from_rectangle(4, 5, rectangle, window1)
 
 
     # Test 2:
-    rectangle = rg.Rectangle(rg.Point(120, 103), rg.Point(124, 110))
+    rectangle = rg.Rectangle(rg.Point(600, 400), rg.Point(500, 450))
     rectangle.fill_color = 'blue'
     rectangle.outline_color = 'red'
-    draw_circles_from_rectangle(8, 2, rectangle, window1)
+    rectangle.outline_thickness = 3
+    draw_circles_from_rectangle(8, 3, rectangle, window1)
     window1.close_on_mouse_click()
 
     title = 'Test 3 of DRAW_SQUARES_FROM_CIRCLE: '
     title += ' 20 teeny squares from blue circle!'
-    window2 = rg.RoseWindow(525, 300, title)
+    window2 = rg.RoseWindow(620, 380, title)
 
     # Test 3:
-    rectangle = rg.Rectangle(rg.Point(320, 103), rg.Point(314, 110))
-    rectangle.fill_color = 'blue'
-    rectangle.outline_color = 'yellow'
-    draw_circles_from_rectangle(7, 4, rectangle, window2)
+    rectangle = rg.Rectangle(rg.Point(375, 330), rg.Point(350, 280))
+    rectangle.fill_color = 'yellow'
+    rectangle.outline_color = 'brown'
+    rectangle.outline_thickness = 5
+    draw_circles_from_rectangle(6, 10, rectangle, window2)
     window2.close_on_mouse_click()
 
 
